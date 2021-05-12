@@ -7,9 +7,9 @@ jobs:
     name: AutoRebase
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
       - name: config main branch
         run: git config --global init.defaultBranch main
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Check diff
         run: git diff origin/main HEAD --exit-code
